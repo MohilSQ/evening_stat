@@ -25,4 +25,6 @@ class AppStrings {
   static const String info = "Info";
   static const String over = "Over";
   static const String interest = "Interest";
+
+  static const String infoDes = "This app will help distribute your viewing time for information on games in different basketball leagues, by making it appear at certain hours. There will be one information in the daytime and another in the evening. And you can change the time interval of the day and evening in the settings of the application.";
 }

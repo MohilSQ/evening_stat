@@ -30,10 +30,15 @@ class AppColors {
   static Color lightGreyColor = const Color(0xFFE3E0E0);
   static Color transparentColor = const Color(0x00000000);
 
+  static Color blurColor = const Color(0x80044C89);
+
   ///************** Light Color **************///
   static Color lightAppColor = const Color(0xFF003967);
   static Color lightUnSelectColor = const Color(0xFF6F7E86);
   static Color lightSelectColor = const Color(0xFF0092E5);
   static Color lightButtonColorFirst = const Color(0xFF0B6BBC);
   static Color lightButtonColorSecond = const Color(0xFF064478);
+  static Color lightUnButtonColorFirst = const Color(0xFF949494);
+  static Color lightUnButtonColorSecond = const Color(0xFF515151);
+  static Color lightUnButtonTextColor = const Color(0xFF474747);
 }
