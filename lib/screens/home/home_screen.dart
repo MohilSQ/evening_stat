@@ -29,7 +29,7 @@ class HomeScreen extends GetView<HomeController> {
             height: MediaQuery.of(context).padding.bottom + 8.h,
             width: MediaQuery.of(context).size.width,
             color: AppColors.lightAppColor,
-            padding: EdgeInsets.only(top: 1.8.h),
+            padding: EdgeInsets.only(top: 1.8.h, bottom: MediaQuery.of(context).padding.bottom),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: controller.bottomSheetList
@@ -38,7 +38,7 @@ class HomeScreen extends GetView<HomeController> {
                           controller.whichScreen.value = value.title!;
                         },
                         child: Container(
-                          width: 6.h,
+                          width: 7.h,
                           color: Colors.transparent,
                           child: Column(
                             children: [

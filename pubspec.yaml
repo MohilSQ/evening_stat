@@ -49,6 +49,7 @@ dependencies:
 
   intl: ^0.18.0
   sizer: ^2.0.15
+  another_xlider: ^1.1.2
 
 dev_dependencies:
   flutter_test:

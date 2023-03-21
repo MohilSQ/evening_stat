@@ -1,11 +1,17 @@
 import 'package:evening_stat/model/app_model.dart';
 import 'package:evening_stat/res/constant/app_assets.dart';
 import 'package:evening_stat/res/constant/app_strings.dart';
+import 'package:evening_stat/screens/info/info_binding.dart';
 import 'package:evening_stat/screens/info/info_screen.dart';
+import 'package:evening_stat/screens/interest/interest_binding.dart';
 import 'package:evening_stat/screens/interest/interest_screen.dart';
+import 'package:evening_stat/screens/option/option_binding.dart';
 import 'package:evening_stat/screens/option/option_screen.dart';
+import 'package:evening_stat/screens/over/over_binding.dart';
 import 'package:evening_stat/screens/over/over_screen.dart';
+import 'package:evening_stat/screens/position/position_binding.dart';
 import 'package:evening_stat/screens/position/position_screen.dart';
+import 'package:evening_stat/screens/schedule/schedule_binding.dart';
 import 'package:evening_stat/screens/schedule/schedule_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -44,5 +50,17 @@ class HomeController extends GetxController {
       default:
         return Container();
     }
+  }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    PositionBinding().dependencies();
+    ScheduleBinding().dependencies();
+    OverBinding().dependencies();
+    InterestBinding().dependencies();
+    OptionBinding().dependencies();
+    InfoBinding().dependencies();
+    super.onInit();
   }
 }
