@@ -34,6 +34,7 @@ class OptionScreen extends GetView<OptionController> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 7.w),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -50,7 +51,7 @@ class OptionScreen extends GetView<OptionController> {
                     title: "On",
                     onPressed: () {},
                   ),
-                  SizedBox(width: 4.w),
+                  SizedBox(width: 3.w),
                   AppButton(
                     title: "Off",
                     disableButton: true,
@@ -58,7 +59,7 @@ class OptionScreen extends GetView<OptionController> {
                   ),
                 ],
               ),
-              const SizedBox(height: 25),
+              SizedBox(height: 4.h),
               Row(
                 children: [
                   Text(
@@ -110,16 +111,14 @@ class OptionScreen extends GetView<OptionController> {
                           ),
                         ),
                         selectedItemBuilder: (context) => controller.items
-                            .map(
-                              (e) => Text(
-                                e,
-                                style: TextStyle(
-                                  fontSize: 14.sp,
-                                  color: AppColors.whiteColor,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            )
+                            .map((value) => Text(
+                                  value,
+                                  style: TextStyle(
+                                    fontSize: 14.sp,
+                                    color: AppColors.whiteColor,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ))
                             .toList(),
                         items: controller.items.map((String items) {
                           return DropdownMenuItem(
@@ -149,11 +148,46 @@ class OptionScreen extends GetView<OptionController> {
                   ),
                 ],
               ),
-              const SizedBox(height: 25),
+              SizedBox(height: 5.h),
+              Text(
+                "Timer",
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  color: AppColors.whiteColor,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 1.h),
               Stack(
                 children: [
+                  Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: controller.steps
+                          .map((value) => SizedBox(
+                                width: 2.8.w,
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(
+                                        fontSize: 5.5.sp,
+                                        color: AppColors.whiteColor,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    SizedBox(height: 0.3.h),
+                                    Container(
+                                      height: (int.parse(value) % 2 == 0) ? 1.4.h : 1.h,
+                                      width: 0.5.w,
+                                      color: AppColors.whiteColor,
+                                    ),
+                                  ],
+                                ),
+                              ))
+                          .toList()),
                   Container(
-                    padding: EdgeInsets.only(top: 1.45.h),
+                    padding: EdgeInsets.only(top: 1.2.h),
                     child: FlutterSlider(
                       values: const [1],
                       max: 24,
@@ -197,35 +231,36 @@ class OptionScreen extends GetView<OptionController> {
                       ),
                     ),
                   ),
-                  Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: controller.steps
-                          .map((value) => SizedBox(
-                                width: 2.8.w,
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      value,
-                                      style: TextStyle(
-                                        fontSize: 5.5.sp,
-                                        color: AppColors.whiteColor,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    SizedBox(height: 0.3.h),
-                                    Container(
-                                      height: (int.parse(value) % 2 == 0) ? 1.4.h : 1.h,
-                                      width: 0.5.w,
-                                      color: AppColors.whiteColor,
-                                    ),
-                                  ],
-                                ),
-                              ))
-                          .toList()),
                 ],
               ),
             ],
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 4.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AppButton(
+                  title: "Save",
+                  width: 32.w,
+                  height: 3.4.h,
+                  fontSize: 15.sp,
+                  disableButton: true,
+                  onPressed: () {},
+                ),
+                SizedBox(width: 8.w),
+                AppButton(
+                  title: "Default",
+                  width: 32.w,
+                  height: 3.4.h,
+                  fontSize: 15.sp,
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ),
         ),
       ],

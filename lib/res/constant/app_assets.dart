@@ -12,6 +12,7 @@ class AppAssets {
   static const String interest = "${imagesPath}interest.png";
   static const String over = "${imagesPath}over.png";
 
-// Tab Night -------->>
+// Option -------->>
   static const String lightBG = "${imagesPath}light_bg.png";
+  static const String alertBG = "${imagesPath}alert_bg.png";
 }
