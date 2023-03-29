@@ -23,7 +23,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 2.8.h,
+      height: height ?? 3.h,
       width: width ?? 18.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(2.h),
@@ -54,7 +54,7 @@ class AppButton extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: disableButton! ? AppColors.lightUnButtonTextColor : AppColors.whiteColor,
-                  fontSize: fontSize ?? 13.sp,
+                  fontSize: fontSize ?? 11.sp,
                   fontWeight: FontWeight.w600,
                 ),
               )

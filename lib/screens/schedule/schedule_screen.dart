@@ -7,8 +7,9 @@ class ScheduleScreen extends GetView<ScheduleController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(color: Colors.deepPurple),
+    return Container(
+      color: Colors.deepPurple,
+      margin: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
     );
   }
 }

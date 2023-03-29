@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../res/constant/app_colors.dart';
+import '../../res/constant/app_strings.dart';
 import 'home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -14,19 +15,14 @@ class HomeScreen extends GetView<HomeController> {
       init: HomeController(),
       builder: (logic) {
         return Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: Obx(() => Text(controller.whichScreen.value)),
-            backgroundColor: AppColors.lightAppColor,
-            titleTextStyle: TextStyle(
-              color: AppColors.whiteColor,
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w500,
+          body: Obx(
+            () => Padding(
+              padding: EdgeInsets.only(top: controller.whichScreen.value == AppStrings.option || controller.whichScreen.value == AppStrings.info ? 0 : MediaQuery.of(context).padding.top),
+              child: controller.screenData(),
             ),
           ),
-          body: Obx(() => controller.screenData()),
           bottomNavigationBar: Container(
-            height: MediaQuery.of(context).padding.bottom + 8.h,
+            height: MediaQuery.of(context).padding.bottom + 8.2.h,
             width: MediaQuery.of(context).size.width,
             color: AppColors.lightAppColor,
             padding: EdgeInsets.only(top: 1.8.h, bottom: MediaQuery.of(context).padding.bottom),
@@ -38,7 +34,7 @@ class HomeScreen extends GetView<HomeController> {
                           controller.whichScreen.value = value.title!;
                         },
                         child: Container(
-                          width: 7.h,
+                          width: 8.h,
                           color: Colors.transparent,
                           child: Column(
                             children: [

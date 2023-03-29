@@ -13,38 +13,50 @@ class InfoScreen extends GetView<InfoController> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          AppAssets.lightBG,
-          fit: BoxFit.cover,
-          height: double.infinity,
-          width: double.infinity,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(AppStrings.info),
+        backgroundColor: AppColors.lightAppColor,
+        titleTextStyle: TextStyle(
+          color: AppColors.whiteColor,
+          fontSize: 18.sp,
+          fontWeight: FontWeight.w500,
         ),
-        BackdropFilter(
-          filter: ImageFilter.blur(
-            sigmaX: 3.5,
-            sigmaY: 3.5,
+      ),
+      body: Stack(
+        children: [
+          Image.asset(
+            AppAssets.lightBG,
+            fit: BoxFit.cover,
+            height: double.infinity,
+            width: double.infinity,
           ),
-          child: Container(
-            color: AppColors.blurColor,
+          BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 3.5,
+              sigmaY: 3.5,
+            ),
+            child: Container(
+              color: AppColors.blurColor,
+            ),
           ),
-        ),
-        Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 7.w),
-            child: Text(
-              AppStrings.infoDes,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20.sp,
-                color: AppColors.whiteColor,
-                fontWeight: FontWeight.w600,
+          Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 7.w),
+              child: Text(
+                AppStrings.infoDes,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20.sp,
+                  color: AppColors.whiteColor,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -14,7 +14,7 @@ class Utils {
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
         statusBarBrightness: Brightness.light,
-        systemNavigationBarColor: Colors.grey.shade100,
+        systemNavigationBarColor: Colors.black,
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
     );
@@ -24,7 +24,7 @@ class Utils {
   static void lightStatusBar() {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
+        statusBarColor: Colors.white,
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark,
         systemNavigationBarColor: Colors.black,
