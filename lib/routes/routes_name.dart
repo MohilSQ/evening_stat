@@ -8,3 +8,4 @@ const String overBinding = '/OVER_SCREEN';
 const String interestBinding = '/INTEREST_SCREEN';
 const String optionBinding = '/OPTION_SCREEN';
 const String infoBinding = '/INFO_SCREEN';
+const String previewBinding = '/PREVIEW_SCREEN';

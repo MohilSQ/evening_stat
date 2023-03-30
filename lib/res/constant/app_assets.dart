@@ -15,4 +15,9 @@ class AppAssets {
 // Option -------->>
   static const String lightBG = "${imagesPath}light_bg.png";
   static const String alertBG = "${imagesPath}alert_bg.png";
+
+// Option -------->>
+  static const String detailImage = "${imagesPath}detail_image.png";
+  static const String teamLogo = "${imagesPath}team_logo.png";
+  static const String teamLogoTwo = "${imagesPath}team_logo_two.png";
 }

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../res/constant/app_colors.dart';
-import '../../res/constant/app_strings.dart';
 import 'home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -16,10 +15,7 @@ class HomeScreen extends GetView<HomeController> {
       builder: (logic) {
         return Scaffold(
           body: Obx(
-            () => Padding(
-              padding: EdgeInsets.only(top: controller.whichScreen.value == AppStrings.option || controller.whichScreen.value == AppStrings.info ? 0 : MediaQuery.of(context).padding.top),
-              child: controller.screenData(),
-            ),
+            () => controller.screenData(),
           ),
           bottomNavigationBar: Container(
             height: MediaQuery.of(context).padding.bottom + 8.2.h,

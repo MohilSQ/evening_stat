@@ -89,13 +89,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
 
 
-#  fonts:
-#    - family: Inter
-#      fonts:
-#        - asset: assets/fonts/Inter-Regular.ttf
-#        - asset: assets/fonts/Inter-Medium.ttf
-#        - asset: assets/fonts/Inter-SemiBold.ttf
-#        - asset: assets/fonts/Inter-Bold.ttf
+  #fonts:
+  #  - family: Inter
+  #    fonts:
+  #      - asset: assets/fonts/Inter-Regular.ttf
+  #      - asset: assets/fonts/Inter-Medium.ttf
+  #      - asset: assets/fonts/Inter-SemiBold.ttf
+  #      - asset: assets/fonts/Inter-Bold.ttf
 
   #
   # For details regarding fonts from package dependencies,

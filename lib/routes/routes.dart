@@ -1,3 +1,4 @@
+import 'package:evening_stat/routes/routes_name.dart';
 import 'package:evening_stat/screens/home/home_binding.dart';
 import 'package:evening_stat/screens/home/home_screen.dart';
 import 'package:evening_stat/screens/info/info_binding.dart';
@@ -10,9 +11,10 @@ import 'package:evening_stat/screens/over/over_binding.dart';
 import 'package:evening_stat/screens/over/over_screen.dart';
 import 'package:evening_stat/screens/position/position_binding.dart';
 import 'package:evening_stat/screens/position/position_screen.dart';
+import 'package:evening_stat/screens/preview/preview_binding.dart';
+import 'package:evening_stat/screens/preview/preview_screen.dart';
 import 'package:evening_stat/screens/schedule/schedule_binding.dart';
 import 'package:evening_stat/screens/schedule/schedule_screen.dart';
-import 'package:evening_stat/utils/routes/routes_name.dart';
 import 'package:get/get.dart';
 
 class Routes {
@@ -24,5 +26,6 @@ class Routes {
     GetPage(name: interestBinding, page: () => const InterestScreen(), binding: InterestBinding()),
     GetPage(name: optionBinding, page: () => const OptionScreen(), binding: OptionBinding()),
     GetPage(name: infoBinding, page: () => const InfoScreen(), binding: InfoBinding()),
+    GetPage(name: previewBinding, page: () => const PreviewScreen(), binding: PreviewBinding()),
   ];
 }
