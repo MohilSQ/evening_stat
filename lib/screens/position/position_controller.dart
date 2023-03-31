@@ -1,7 +1,19 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../res/common/app_drop_down.dart';
 
 class PositionController extends GetxController {
   RxString dropDownValue = '1'.obs;
 
-  var items = ['1', '2', '3', '4', '5', '6', '7', '8'];
+  List<DropdownMenuItem<String?>?>? items = [
+    dropdownMenuItem("1"),
+    dropdownMenuItem("2"),
+    dropdownMenuItem("3"),
+    dropdownMenuItem("4"),
+    dropdownMenuItem("5"),
+    dropdownMenuItem("6"),
+    dropdownMenuItem("7"),
+    dropdownMenuItem("8"),
+  ];
 }
